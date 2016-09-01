@@ -38,15 +38,16 @@ $xhr.done(function(data2) {
     console.log(data2);
     // console.log(data2.photos[0].img_src);
 
-    var imageTitle2 = data2.photos[0].camera.full_name;
+    // var imageTitle2 = data2.photos[0].camera.full_name;
     // var image2 = data2.photos.img_src;
     // var description = data.explanation;
-    $('#title2GoesHere').html('<p>"Opportunity - ' + imageTitle2 + '"</p>');
+    // $('#title2GoesHere').html('<p>"Opportunity - ' + imageTitle2 + '"</p>');
     var image2=[];
+    var imageTitle2=[];
     for (var i = 0; i < 20; i++){
         // var image2 = data2.photos[i].img_src;
         console.log(data2.photos[i].img_src);
-        $('#photo2GoesHere').append('<img src="' + data2.photos[i].img_src + '" alt="Space!" height="400" >');
+        $('#title2GoesHere').append('<p>"Opportunity - ' + data2.photos[i].camera.full_name + '"</p><img src="' + data2.photos[i].img_src + '" alt="Space!" height="400" >');
     }
 
     // $('#description2GoesHere').html('<p>' + description + '"</p>');
