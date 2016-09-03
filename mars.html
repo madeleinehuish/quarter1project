@@ -5,21 +5,25 @@
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
 
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-      <!-- <link type="text/css" rel="stylesheet" href="style.css" /> -->
+      <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+      <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
+      <link type="text/css" rel="stylesheet" href="style.css" />
   </head>
-  <body>
+  <body id="background">
 
-    <nav class = "#e57373 red lighten-2">
+    <nav class = "N/A transparent" id="navBar">
     <div class="nav-wrapper">
-      <a href="#" class="brand-logo">Mars!</a>
+      <a href="#" id="logo" class="brand-logo">Mars!</a>
       <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
       <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="index.html">home</a>home</li>
-        <li><a href="mars.html">mars</a>mars</li>
+        <li><a href="index.html">pic of day</a></li>
+        <li><a href="mars.html" class="active">mars</a></li>
+        <li><a href="extras.html">extras</a></li>
       </ul>
       <ul class="side-nav" id="mobile-demo">
-        <li><a href="index.html">home</a>home</li>
-        <li><a href="mars.html">mars</a>mars</li>
+        <li><a href="index.html">pic of day</a></li>
+        <li><a href="mars.html" class="active">mars</a></li>
+        <li><a href="extras.html">extras</a></li>
       </ul>
     </div>
   </nav>
@@ -28,12 +32,17 @@
                 <form class="col s12">
                     <div class="row">
                         <div class="input-field col s12 offset-m3 m4 align-center">
-                            <input name ="search" placeholder="year-month-day" value="" id="dateEntered" type="text" class="validate">
-                            <label for="movie">Date</label>
+                          <br />
+                          <br />
+                            <input name ="search" placeholder="sol day" value="" id="dateEntered2" type="text" class="validate">
+                            <label for="dateEntered2"></label>
+                            <input name ="search" placeholder="page number" value="" id="pageEntered" type="text" class="validate">
+                            <label for="pageEntered"></label>
                         </div>
                         <button class="btn waves-effect waves-light #e57373 red lighten-2" id="marsButton" type="submit" name="action">Hit me with some Mars!
                             <i class="material-icons right">search</i>
                         </button>
+                        <a class="btn-floating btn-large waves-effect waves-light #e57373 red lighten-2" id="reload"><i class="material-icons">add</i></a>
                         <div id='title2GoesHere'></div>
                         <div id='photo2GoesHere'></div>
                         <div id='description2GoesHere'></div>

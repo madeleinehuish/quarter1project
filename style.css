@@ -1,0 +1,50 @@
+#background{
+  background-image: url('vikingMosaicEdited.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+#background0{
+  background-image:url('space.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+#background1{
+  background-image:url('saturnCassini2.jpg');
+  background-repeat: no-repeat;
+}
+*{
+  color:white;
+  font-family: 'Orbitron', sans-serif;
+}
+
+#logo{
+  margin-left: 4%;
+}
+
+.naV {
+  opacity: 0.0;
+
+}
+
+p{
+  font-family: 'Slabo 27px', serif;
+}
+
+.desc{
+  background: #24232d;
+  padding: 10px;
+  padding-left:20px;
+}
+
+#navBar {
+  position:fixed;
+  z-index: 2;
+}
+/*.ontop {
+  position: relative;
+  top: 4.7em;
+  opacity: 1.0;
+}*/
+/*a {
+  z-index: 2;
+}*/
