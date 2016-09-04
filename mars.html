@@ -1,59 +1,74 @@
 <!DOCTYPE html>
   <html>
+
     <head>
       <!--Import Google Icon Font-->
       <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
       <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
       <link type="text/css" rel="stylesheet" href="style.css" />
-  </head>
-  <body id="background">
+    </head>
 
-    <nav class = "N/A transparent" id="navBar">
-    <div class="nav-wrapper">
-      <a href="#" id="logo" class="brand-logo">Mars!</a>
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
-        <li><a href="index.html">pic of day</a></li>
-        <li><a href="mars.html" class="active">mars</a></li>
-        <li><a href="extras.html">extras</a></li>
-      </ul>
-      <ul class="side-nav" id="mobile-demo">
-        <li><a href="index.html">pic of day</a></li>
-        <li><a href="mars.html" class="active">mars</a></li>
-        <li><a href="extras.html">extras</a></li>
-      </ul>
-    </div>
-  </nav>
-    <div class="container">
-            <div class="row">
-                <form class="col s12">
-                    <div class="row">
-                        <div class="input-field col s12 offset-m3 m4 align-center">
-                          <br />
-                          <br />
-                            <input name ="search" placeholder="sol day" value="" id="dateEntered2" type="text" class="validate">
-                            <label for="dateEntered2"></label>
-                            <input name ="search" placeholder="page number" value="" id="pageEntered" type="text" class="validate">
-                            <label for="pageEntered"></label>
-                        </div>
-                        <button class="btn waves-effect waves-light #e57373 red lighten-2" id="marsButton" type="submit" name="action">Hit me with some Mars!
-                            <i class="material-icons right">search</i>
-                        </button>
-                        <a class="btn-floating btn-large waves-effect waves-light #e57373 red lighten-2" id="reload"><i class="material-icons">add</i></a>
-                        <div id='title2GoesHere'></div>
-                        <div id='photo2GoesHere'></div>
-                        <div id='description2GoesHere'></div>
-                    </div>
-                    </div>
-                </form>
-            </div>
+    <body id="background">
+
+      <nav class = "fiXed" role="navigation" id="navMars">
+        <div class="nav-wrapper container">
+          <a href="#" id="logo-container" class="brand-logo">Mars!</a>
+          <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+          <ul  class="right hide-on-med-and-down">
+            <li><a href="index.html">pic of day</a></li>
+            <li><a href="mars.html" class="active">mars</a></li>
+            <li><a href="extras.html">extras</a></li>
+          </ul>
+          <ul class="side-nav" id="nav-mobile">
+            <li><a href="index.html">pic of day</a></li>
+            <li><a href="mars.html" class="active">mars</a></li>
+            <li><a href="extras.html">extras</a></li>
+          </ul>
         </div>
-    <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
-    <script src='app.js' charset='utf-8'></script>
-  </body>
+      </nav>
+
+
+      <div class ="container">
+
+        <div class ="row">
+
+
+
+          <div class ="col s12 push-m7">
+
+                <form class='fiXed' id="marsForm">
+                  <div class="input-field">
+                    <br />
+                    <br />
+                    <input name ="search" placeholder="sol day" value="" id="dateEntered2" type="text" class="validate">
+                    <label for="dateEntered2"></label>
+                    <input name ="search" placeholder="page number" value="" id="pageEntered" type="text" class="validate">
+                    <label for="pageEntered"></label>
+                  </div>
+                  <button class="btn waves-effect waves-light #e57373 red lighten-2" id="marsButton" type="submit" name="action">Hit me with some Mars!
+                    <i class="material-icons right">search</i>
+                  </button>
+                  <a class="btn-floating btn-large waves-effect waves-light #e57373 red lighten-2" id="reload"><i class="material-icons">add</i></a>
+                </form>
+
+          </div>
+          <div class ="col s12 m8">
+
+
+                <div id='title2GoesHere'>placeholder</div>
+                <div id='photo2GoesHere'>placeholder</div>
+                <div id='description2GoesHere'>placeholder</div>
+
+          </div>
+
+        </div>
+
+      </div>
+      <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+      <script src='app.js' charset='utf-8'></script>
+    </body>
 
 </html>

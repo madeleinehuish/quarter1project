@@ -1,8 +1,9 @@
-#background{
+#background, #navMars {
   background-image: url('vikingMosaicEdited.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
 }
+
 #background0{
   background-image:url('space.jpg');
   background-repeat: no-repeat;
@@ -12,19 +13,26 @@
   background-image:url('saturnCassini2.jpg');
   background-repeat: no-repeat;
 }
+ul {
+  z-index: 2;
+}
 *{
   color:white;
   font-family: 'Orbitron', sans-serif;
 }
-
-#logo{
-  margin-left: 4%;
+#marsForm {
+  margin-top: 4%;
 }
 
-.naV {
+
+/*#logo{
+  margin-left: 4%;
+}*/
+
+/*.naV {
   opacity: 0.0;
 
-}
+}*/
 
 p{
   font-family: 'Slabo 27px', serif;
@@ -36,10 +44,10 @@ p{
   padding-left:20px;
 }
 
-#navBar {
+.fiXed {
   position:fixed;
-  z-index: 2;
 }
+
 /*.ontop {
   position: relative;
   top: 4.7em;
