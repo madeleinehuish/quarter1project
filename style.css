@@ -21,6 +21,10 @@
   font-family: 'Orbitron', sans-serif;
 }
 
+#backgroundGoesHere {
+  margin-top:15%;
+  font-family: 'Slabo 27px', serif;
+}
 #picForm {
   margin-top: 10%;
 }
