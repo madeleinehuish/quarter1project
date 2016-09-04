@@ -11,16 +11,16 @@
   </head>
   <body id="background0">
 
-    <nav class = "N/A transparent">
-    <div class="nav-wrapper">
-      <a href="#" id="logo" class="brand-logo ontop">Astro Pic of the Day</a>
-      <a href="#" data-activates="mobile-demo" class="button-collapse"><i class="material-icons">menu</i></a>
-      <ul id="nav-mobile" class="right hide-on-med-and-down">
+    <nav class = "fiXed" role="navigation" id="navPicofday">
+    <div class="nav-wrapper container">
+      <a href="#" id="logo-container" class="brand-logo ontop">Astro Pic of the Day</a>
+      <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
         <li><a href="index.html" class="active">pic of day</a></li>
         <li><a href="mars.html">mars</a></li>
         <li><a href="extras.html">extras</a></li>
       </ul>
-      <ul class="side-nav" id="mobile-demo">
+      <ul class="side-nav" id="nav-mobile">
         <li><a href="index.html" class="active">pic of day</a></li>
         <li><a href="mars.html">mars</a></li>
         <li><a href="extras.html">extras</a></li>
@@ -29,24 +29,25 @@
   </nav>
     <div class="container">
             <div class="row">
-                <form class="col s12">
-                    <div class="row">
-                        <div class="input-field col s12 offset-m3 m4 align-center">
-                            <input name ="search" placeholder="year-month-day" value="" id="dateEntered" type="text" class="validate">
-                            <label for="dateEntered">Date</label>
-                        </div>
-                        <button class="btn waves-effect waves-light #7986cb indigo lighten-2" id="button" type="submit" name="action">Hit me with some Space!
-                            <i class="material-icons right">search</i>
-                        </button>
-                        <a class="btn-floating btn-large waves-effect waves-light #7986cb indigo lighten-2" id="reload"><i class="material-icons">add</i></a>
-                        <div id='titleGoesHere'></div>
-                        <div id='photoGoesHere'></div>
-                        <div id='descriptionGoesHere'></div>
-                    </div>
-                    </div>
+              <div class="col s12 push-m7">
+                <form class="fiXed" id="picForm">
+                  <input name ="search" placeholder="year-month-day" value="" id="dateEntered" type="text" class="validate">
+                  <label for="dateEntered"></label>
+                  <button class="btn waves-effect waves-light #7986cb indigo lighten-2" id="button" type="submit" name="action">Hit me with some Space!
+                    <i class="material-icons right">search</i>
+                  </button>
+                  <a class="btn-floating btn-large waves-effect waves-light #7986cb indigo lighten-2" id="reload"><i class="material-icons">add</i></a>
                 </form>
+              </div>
+              <div class="col s12 m8" id="picInstructions">
+                <div id='titleGoesHere'></div>
+                <div id='photoGoesHere'></div>
+                <div id='descriptionGoesHere'></div>
+              </div>
             </div>
-        </div>
+
+    </div>
+
     <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
     <script src='app.js' charset='utf-8'></script>

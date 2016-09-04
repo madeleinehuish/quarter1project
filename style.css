@@ -4,7 +4,7 @@
   background-attachment: fixed;
 }
 
-#background0{
+#background0, #navPicofday{
   background-image:url('space.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -13,17 +13,32 @@
   background-image:url('saturnCassini2.jpg');
   background-repeat: no-repeat;
 }
-ul {
+#navMars {
   z-index: 2;
 }
 *{
   color:white;
   font-family: 'Orbitron', sans-serif;
 }
-#marsForm {
-  margin-top: 4%;
+
+#picForm {
+  margin-top: 10%;
 }
 
+#marsForm {
+  margin-top: 5%;
+}
+#marsInstructions{
+  margin-top:22%;
+}
+#picInstructions {
+  margin-top: 7%;
+}
+
+input[name="rover"]:checked {
+color: white;
+
+}
 
 /*#logo{
   margin-left: 4%;
@@ -34,7 +49,7 @@ ul {
 
 }*/
 
-p{
+.readableText{
   font-family: 'Slabo 27px', serif;
 }
 
@@ -48,6 +63,11 @@ p{
   position:fixed;
 }
 
+@media (max-width: 768px){
+  #marsForm {
+    position: static;
+  }
+}
 /*.ontop {
   position: relative;
   top: 4.7em;
