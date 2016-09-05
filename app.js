@@ -31,6 +31,8 @@
   $('#rbSpirit').change(function(){
   if($(this).is(':checked')){
     $('#marsInstructions').css('display','none');
+    $('#backgroundTitle').empty();
+    $('#backgroundGoesHere').empty();
     $('#opportunityBackground').css('display','none');
     $('#curiosityBackground').css('display','none');
     $('#spiritBackground').css('display','block');
@@ -41,6 +43,8 @@
   $('#rbOpportunity').change(function(){
   if($(this).is(':checked')){
     $('#marsInstructions').css('display','none');
+    $('#backgroundTitle').empty();
+    $('#backgroundGoesHere').empty();
     $('#curiosityBackground').css('display','none');
     $('#spiritBackground').css('display','none');
     $('#opportunityBackground').css('display','block');
@@ -50,6 +54,8 @@
   $('#rbCuriosity').change(function(){
   if($(this).is(':checked')){
     $('#marsInstructions').css('display','none');
+    $('#backgroundTitle').empty();
+    $('#backgroundGoesHere').empty();
     $('#opportunityBackground').css('display','none');
     $('#spiritBackground').css('display','none');
     $('#curiosityBackground').css('display','block');
