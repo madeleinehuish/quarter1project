@@ -43,11 +43,27 @@
   today = yyyy+'-'+mm+'-'+dd;
   console.log(today)
 
-  //load picture of the day
+  //load picture of the day and set up carousel on extras page
   $(document).ready(function() {
     if (window.location.pathname === '/Users/maddiehuish/Projects/Q1Project/index.html') {
           picOfDay(today);
-        }});
+    } else if (window.location.pathname === '/Users/maddiehuish/Projects/Q1Project/extras.html') {
+        $("#posterHolder").owlCarousel({
+
+        navigation : true, // Show next and prev buttons
+        slideSpeed : 300,
+        paginationSpeed : 400,
+        singleItem:true
+
+        // "singleItem:true" is a shortcut for:
+        // items : 1,
+        // itemsDesktop : false,
+        // itemsDesktopSmall : false,
+        // itemsTablet: false,
+        // itemsMobile : false
+      });
+    }
+  });
 
   $('#button').click(function(){
     event.preventDefault();
@@ -202,7 +218,7 @@
   });
 
   // $('.carousel').carousel();
-  $('#posterHolder').carousel();
+  // $('#posterHolder').carousel({full_width: true});
 
   function toTitleCase(str){
     return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});

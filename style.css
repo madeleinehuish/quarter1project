@@ -31,8 +31,11 @@
   margin-right:5%;
 }
 
-#marsForm, #posterHolder {
+#marsForm {
   margin-top: 5%;
+}
+#posterHolder {
+  margin-top: 10%;
 }
 #marsInstructions{
   margin-top:22%;
@@ -71,11 +74,18 @@ color: white;
   position:fixed;
 }
 
+#posterHolder, .item {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+
 @media (max-width: 768px){
   #marsForm, #picForm {
     position: static;
   }
-  #picForm {
+  #picForm, #posterHolder {
     margin-top: 18%;
   }
 }
