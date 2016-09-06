@@ -554,8 +554,8 @@ if (typeof Object.create !== "function") {
             if (base.isTransition) {
                 return false;
             }
-
-            base.currentItem += base.options.scrollPerPage === true ? base.options.items : 1;
+//changed this code to add two items to carousel (from stack overflow : http://stackoverflow.com/questions/21045951/slide-2-items-in-owl-carousel) changed 581 and added 582
+            base.currentItem += base.options.scrollPerPage === true ? base.options.items : 2;
             if (base.currentItem > base.maximumItem + (base.options.scrollPerPage === true ? (base.options.items - 1) : 0)) {
                 if (base.options.rewindNav === true) {
                     base.currentItem = 0;
@@ -578,8 +578,8 @@ if (typeof Object.create !== "function") {
             if (base.options.scrollPerPage === true && base.currentItem > 0 && base.currentItem < base.options.items) {
                 base.currentItem = 0;
             } else {
-                base.currentItem -= base.options.scrollPerPage === true ? base.options.items : 1;
-            }
+                base.currentItem -= base.options.scrollPerPage === true ? base.options.items : 2;
+            } if (base.currentItem === -1) base.currentItem = 0;
             if (base.currentItem < 0) {
                 if (base.options.rewindNav === true) {
                     base.currentItem = base.maximumItem;
@@ -1197,7 +1197,7 @@ if (typeof Object.create !== "function") {
                 iterations += 1;
                 if (base.completeImg($lazyImg.get(0)) || isBackgroundImg === true) {
                     showImage();
-                } else if (iterations <= 100) {//if image loads in less than 10 seconds 
+                } else if (iterations <= 100) {//if image loads in less than 10 seconds
                     window.setTimeout(checkLazyImage, 100);
                 } else {
                     showImage();
@@ -1226,7 +1226,7 @@ if (typeof Object.create !== "function") {
                 iterations += 1;
                 if (base.completeImg($currentimg.get(0))) {
                     addHeight();
-                } else if (iterations <= 100) { //if image loads in less than 10 seconds 
+                } else if (iterations <= 100) { //if image loads in less than 10 seconds
                     window.setTimeout(checkImage, 100);
                 } else {
                     base.wrapperOuter.css("height", ""); //Else remove height attribute

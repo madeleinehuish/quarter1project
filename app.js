@@ -49,14 +49,16 @@
           picOfDay(today);
     } else if (window.location.pathname === '/Users/maddiehuish/Projects/Q1Project/extras.html') {
         $("#posterHolder").owlCarousel({
-
+        items:2,
         navigation : true, // Show next and prev buttons
         slideSpeed : 300,
         paginationSpeed : 400,
-        singleItem:true
+        // singleItem:true,
+
+
 
         // "singleItem:true" is a shortcut for:
-        // items : 1,
+        // items : 2,
         // itemsDesktop : false,
         // itemsDesktopSmall : false,
         // itemsTablet: false,

@@ -2,16 +2,19 @@
   background-image: url('images/vikingMosaicEdited.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-color: rgb(178,74,26);
 }
 
 #background0, #navPicofday{
   background-image:url('images/space.jpg');
   background-repeat: no-repeat;
   background-attachment: fixed;
+  background-color: rgb(52,98,115);
 }
 #background1, #navExtras{
   background-image:url('images/saturnCassini2.jpg');
   background-repeat: no-repeat;
+  background-color: rgb(34,28,34);
 }
 #navMars {
   z-index: 2;
@@ -79,7 +82,10 @@ color: white;
     width: 100%;
     height: auto;
 }
-
+.textHolder{
+  padding-right:20%;
+  padding-left:20%;
+}
 
 @media (max-width: 768px){
   #marsForm, #picForm {
