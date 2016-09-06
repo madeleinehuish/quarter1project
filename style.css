@@ -27,6 +27,8 @@
 }
 #picForm {
   margin-top: 10%;
+  margin-left:10%;
+  margin-right:5%;
 }
 
 #marsForm, #posterHolder {
@@ -61,32 +63,20 @@ color: white;
 
 }
 
-/*#logo{
-  margin-left: 4%;
-}*/
-
-/*.naV {
-  opacity: 0.0;
-
-}*/
-
 .readableText{
   font-family: 'Slabo 27px', serif;
 }
-
-/*.desc{
-  background: #24232d;
-  padding: 10px;
-  padding-left:20px;
-}*/
 
 .fiXed {
   position:fixed;
 }
 
 @media (max-width: 768px){
-  #marsForm {
+  #marsForm, #picForm {
     position: static;
+  }
+  #picForm {
+    margin-top: 18%;
   }
 }
 /*.ontop {
@@ -96,4 +86,19 @@ color: white;
 }*/
 /*a {
   z-index: 2;
+}*/
+
+/*#logo{
+  margin-left: 4%;
+}*/
+
+/*.naV {
+  opacity: 0.0;
+
+}*/
+
+/*.desc{
+  background: #24232d;
+  padding: 10px;
+  padding-left:20px;
 }*/

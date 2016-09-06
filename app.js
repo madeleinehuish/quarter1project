@@ -1,11 +1,64 @@
 (function() {
   'use strict';
 
-  $('#button').click(function() {
+  // var slider = document.getElementById('test5');
+  // var sliderMax;
 
+
+  // $('#test5').max = sliderMax;
+  // if ($('#dateEntered2').val()==="spirit"){
+  //   sliderMax = 2208;
+  // } else if ($('#dateEntered2').val()==="opportunity") {
+  //   sliderMax = 4483;
+  // } else {
+  //   sliderMax = 1451;
+  // }
+  //
+  // noUiSlider.create(slider, {
+  //  start: [80],
+  //  connect: true,
+  //  step: 1,
+  //  range: {
+  //    'min': 1,
+  //    'max': sliderMax
+  //  },
+  //  format: wNumb({
+  //    decimals: 0
+  //  })
+  // });
+  // Figure out Today's Date for Pic of Day
+  var today = new Date();
+  var dd = today.getDate();
+  var mm = today.getMonth()+1; //January is 0!
+  var yyyy = today.getFullYear();
+
+  if(dd<10) {
+      dd='0'+dd
+  }
+
+  if(mm<10) {
+      mm='0'+mm
+  }
+
+  today = yyyy+'-'+mm+'-'+dd;
+  console.log(today)
+
+  //load picture of the day
+  $(document).ready(function() {
+    if (window.location.pathname === '/Users/maddiehuish/Projects/Q1Project/index.html') {
+          picOfDay(today);
+        }});
+
+  $('#button').click(function(){
     event.preventDefault();
+    console.log('before button function says day entered = ' + $('#dateEntered').val());
+    picOfDay($('#dateEntered').val());
+    console.log('after button function says day entered = ' + $('#dateEntered').val());
+  });
 
-    var dateValue = $('#dateEntered').val();
+  function picOfDay(dateValue) {
+
+    // var dateValue = $('#dateEntered').val();
     var $xhr = $.getJSON('https://api.nasa.gov/planetary/apod?api_key=RC2ZEmLVWlfYOkOYT5MHXkOq82VWb85ejudwxtPm&date=' + dateValue);
 
     $xhr.done(function(data) {
@@ -16,7 +69,7 @@
       var imageTitle = data.title;
       var image = data.hdurl;
       var description = data.explanation;
-      var imageEl = '<img src="' + image + '" alt="Space!" id="photoMod" height="400">';
+      var imageEl = '<img src="' + image + '" alt="Space!" class="responsive-img" id="photoMod" height="400">';
 
       $('#titleGoesHere').html('<p class="desc">"' + imageTitle + '"</p>');
       $('#photoGoesHere').html(imageEl);
@@ -26,13 +79,14 @@
         return err;
       });
     });
-  });
+  }
 
   $('#rbSpirit').change(function(){
   if($(this).is(':checked')){
     $('#marsInstructions').css('display','none');
     $('#backgroundTitle').empty();
     $('#backgroundGoesHere').empty();
+    $('#title2GoesHere').empty();
     $('#opportunityBackground').css('display','none');
     $('#curiosityBackground').css('display','none');
     $('#spiritBackground').css('display','block');
@@ -45,6 +99,7 @@
     $('#marsInstructions').css('display','none');
     $('#backgroundTitle').empty();
     $('#backgroundGoesHere').empty();
+    $('#title2GoesHere').empty();
     $('#curiosityBackground').css('display','none');
     $('#spiritBackground').css('display','none');
     $('#opportunityBackground').css('display','block');
@@ -56,6 +111,7 @@
     $('#marsInstructions').css('display','none');
     $('#backgroundTitle').empty();
     $('#backgroundGoesHere').empty();
+    $('#title2GoesHere').empty();
     $('#opportunityBackground').css('display','none');
     $('#spiritBackground').css('display','none');
     $('#curiosityBackground').css('display','block');
@@ -109,7 +165,13 @@
   $('#marsButton').click(function() {
 
     event.preventDefault();
-    $('#marsInstructions').hide();
+    $('#marsInstructions').css('display','none');
+    $('#backgroundTitle').empty();
+    $('#backgroundGoesHere').empty();
+    $('#opportunityBackground').css('display','none');
+    $('#curiosityBackground').css('display','none');
+    $('#spiritBackground').css('display','none');
+    $('#title2GoesHere').empty();
 
     var rover = $('input[name="rover"]:checked').val();
     var baseUrl = 'https://api.nasa.gov/mars-photos/api/v1/rovers/' + rover + '/photos?';
@@ -126,7 +188,7 @@
       console.log(data2);
       $('#title2GoesHere').append('<br />');
       for (var i = 0; i < 25; i++) {
-        $('#title2GoesHere').append('<p>"'+ data2.photos[i].rover.name + ' ' + data2.photos[i].camera.full_name + ' ' + data2.photos[i].earth_date +'"</p><img src="' + data2.photos[i].img_src + '" alt="Space!" height="400" ><br /><br />');
+        $('#title2GoesHere').append('<p>"'+ data2.photos[i].rover.name + ' ' + data2.photos[i].camera.full_name + ' ' + data2.photos[i].earth_date +'"</p><img src="' + data2.photos[i].img_src + '" alt="Space!" class="responsive-img" height="400" ><br /><br />');
       }
 
       $xhr.fail(function(err) {
@@ -135,12 +197,12 @@
     });
   });
 
-  $('#reload').click(function() {
+  $('.refresh').click(function() {
     location.reload();
   });
 
   // $('.carousel').carousel();
-  $('.carousel.carousel-slider').carousel({full_width: true});
+  $('#posterHolder').carousel();
 
   function toTitleCase(str){
     return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
@@ -148,29 +210,14 @@
 
   $('.button-collapse').sideNav();
 
-  var slider = document.getElementById('test5');
-  var sliderMax;
 
 
-  $('#test5').max = sliderMax;
-  if ($('#dateEntered2').val()==="spirit"){
-    sliderMax = 2208;
-  } else if ($('#dateEntered2').val()==="opportunity") {
-    sliderMax = 4483;
-  } else {
-    sliderMax = 1451;
-  }
+  // $('.datepicker').pickadate({
+  //   selectMonths: true, // Creates a dropdown to control month
+  //   selectYears: 15, // Creates a dropdown of 15 years to control year
+  //   formatSubmit: 'yyyy-mm-dd',
+  // });
 
-  noUiSlider.create(slider, {
-   start: [80],
-   connect: true,
-   step: 1,
-   range: {
-     'min': 1,
-     'max': sliderMax
-   },
-   format: wNumb({
-     decimals: 0
-   })
-  });
+
+
 })();

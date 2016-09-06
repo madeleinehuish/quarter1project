@@ -2,8 +2,7 @@
   <html>
     <head>
       <!--Import Google Icon Font-->
-      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-
+      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet" />
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
       <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
       <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
@@ -29,22 +28,32 @@
   </nav>
     <div class="container">
             <div class="row">
+
               <div class="col s12 push-m9">
                 <form class="fiXed" id="picForm">
-                  <input name ="search" placeholder="year-month-day" value="" id="dateEntered" type="text" class="validate">
-                  <label for="dateEntered"></label>
-                  <button class="btn waves-effect waves-light #7986cb indigo lighten-2" id="button" type="submit" name="action">Hit me with some Space!
-                    <i class="material-icons right">play_arrow</i>
-                  </button>
-                  <br />
-                  <br />
-                  <a class="btn-floating btn-large waves-effect waves-light #7986cb indigo lighten-2" id="reload0"><i class="material-icons">loop</i></a>
+                  <div class="row">
+                    <div class="col s12 m12">
+                      <input name ="search" placeholder="year-month-day" value="" id="dateEntered" type="text" class="validate">
+                      <label for="dateEntered"></label>
+                      <button class="btn waves-effect waves-light #7986cb indigo lighten-2" id="button" type="submit" name="action">Space Me!
+                        <i class="material-icons right">play_arrow</i>
+                      </button>
+                        <br />
+                        <br />
+                      <a class="btn-floating btn-large waves-effect waves-light #7986cb indigo lighten-2" id="reload0"><i class="refresh material-icons">loop</i></a>
+                    </div>
+                  </div>
                 </form>
               </div>
+
               <div class="col s12 m8 m4-offset" id="picInstructions">
-                <div id='titleGoesHere'></div>
-                <div id='photoGoesHere'></div>
-                <div id='descriptionGoesHere'></div>
+                <div class="row">
+                  <div class ="s12 m12">
+                    <div id='titleGoesHere'></div>
+                    <div id='photoGoesHere'></div>
+                    <div id='descriptionGoesHere'></div>
+                  </div>
+                </div>
               </div>
             </div>
 
