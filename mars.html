@@ -1,177 +1,147 @@
 <!DOCTYPE html>
-  <html>
-
-    <head>
-      <!--Import Google Icon Font-->
-      <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
-      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
-      <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
-      <link href="https://fonts.googleapis.com/css?family=Slabo+27px" rel="stylesheet">
-      <!-- <link href="noUiSlider/nouislider.css" rel="stylesheet"> -->
-      <link type="text/css" rel="stylesheet" href="style.css" />
-    </head>
-
-    <body id="background">
-
-      <nav class = "fiXed" role="navigation" id="navMars">
-        <div class="nav-wrapper container">
-          <a href="#" id="logo-container" class="brand-logo">Mars!</a>
-          <a href="#" data-activates="nav-mobile" class="button-collapse"><i class="material-icons">menu</i></a>
+<html>
+<head>
+  <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
+  <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Open+Sans" rel="stylesheet">
+  <link type="text/css" rel="stylesheet" href="css/style.css" />
+</head>
+<body id="background">
+  <div class="navbar-fixed">
+    <nav id="navMars">
+      <div class="container">
+        <div class="nav-wrapper">
+          <a href="#!" class="logo-container brand-logo ontop">Mars!</a>
+          <a href="#" data-activates="mobile-demoMars" class="button-collapse"><i class="material-icons">menu</i></a>
           <ul  class="right hide-on-med-and-down">
             <li><a href="index.html">pic of day</a></li>
             <li><a href="mars.html" class="active">mars</a></li>
             <li><a href="extras.html">extras</a></li>
           </ul>
-          <ul class="side-nav" id="nav-mobile">
+          <ul class="side-nav" id="mobile-demoMars">
             <li><a href="index.html">pic of day</a></li>
             <li><a href="mars.html" class="active">mars</a></li>
             <li><a href="extras.html">extras</a></li>
           </ul>
         </div>
-      </nav>
+      </div>
+    </nav>
+  </div>
 
+  <div class ="container">
+    <div class ="row">
+      <div class ="col s12 push-m9">
+        <form class='fiXed' id="marsForm">
+          <div class="input-field" id="marsFormInput">
+            <br />
+            <br />
 
-      <div class ="container">
-
-        <div class ="row">
-
-          <div class ="col s12 push-m9">
-
-                <form class='fiXed' id="marsForm">
-                  <div class="input-field" id="marsFormInput">
-                    <br />
-                    <br />
-
-                    <h5>Rover Menu</h5>
-                    <br />
-                    <div class="row">
-                    <div class="col s6 m6">
-                    <p>
-                      Pick a Rover Here
-                    </p>
-                    <p>
-                      <input name="rover" type="radio" id="rbSpirit" class="rb" value="spirit"/>
-                      <label for="rbSpirit" class="white-text">Spirit</label>
-                    </p>
-                    <p>
-                      <input name="rover" type="radio" id="rbOpportunity" class="rb" value="opportunity"/>
-                      <label for="rbOpportunity" class="white-text">Opportunity</label>
-                    </p>
-                    <p>
-                      <input name="rover" type="radio" id="rbCuriosity" class="rb" value="curiosity" />
-                      <label for="rbCuriosity" class="white-text">Curiosity</label>
-                    </p>
-                    </div>
-                    <div class="col s6 m6">
-                      <br />
-                      <br />
-                      <br />
-                      <a class="btn-floating btn-large waves-effect waves-light" id="reload"><i class="refresh material-icons">loop</i></a> refresh
-                    </div>
-
-
-                    </div>
-
-
-                    <br />
-
-                    <!-- <p>Sol Day (quick slider)</p>
-                    <p class="range-field">
-                      <input type="range" id="test5" min="1" max="1451" />
-                    </p> -->
-                  <p>Enter Date and Optional Page Here</p>
-                  <div class="row">
-                  <div class="col s6 m6">
-                    <input name ="search" placeholder="sol day" value="" id="dateEntered2" type="text" class="validate">
-                    <label for="dateEntered2"></label>
-                    <br />
-                    <br />
-                    <button class="btn waves-effect waves-light" id="marsButton" type="submit" name="action">Photos
-                      <i class="material-icons right">play_arrow</i>
-                    </button>
-
-                  </div>
-                  <div class="col s6 m6">
-                    <input name ="search" placeholder="earth day" value="" id="dateEntered3" type="text" class="validate">
-                    <label for="dateEntered3"></label>
-                    <input name ="search" placeholder="page (#1 default)" value="" id="pageEntered" type="text" class="validate">
-                    <label for="pageEntered"></label>
-
-
-
-                  </div>
-
-                  </div>
-
-
-
-                </div>
-                </form>
-
+            <h5>Rover Menu</h5>
+            <br />
+            <div class="row">
+            <div class="col s6 m6">
+            <p>
+              Pick a Rover Here
+            </p>
+            <p>
+              <input name="rover" type="radio" id="rbSpirit" class="rb" value="spirit"/>
+              <label for="rbSpirit" class="white-text">Spirit</label>
+            </p>
+            <p>
+              <input name="rover" type="radio" id="rbOpportunity" class="rb" value="opportunity"/>
+              <label for="rbOpportunity" class="white-text">Opportunity</label>
+            </p>
+            <p>
+              <input name="rover" type="radio" id="rbCuriosity" class="rb" value="curiosity" />
+              <label for="rbCuriosity" class="white-text">Curiosity</label>
+            </p>
+            </div>
+            <div class="col s6 m6">
+              <br />
+              <br />
+              <br />
+              <a class="btn-floating btn-large waves-effect waves-light" id="reload"><i class="refresh material-icons">loop</i></a> refresh
+            </div>
+            </div>
+            <br />
+          <p>Enter Date and Optional Page Here</p>
+          <div class="row">
+          <div class="col s6 m6">
+            <input name ="search" placeholder="sol day" value="" id="dateEntered2" type="text" class="validate">
+            <label for="dateEntered2"></label>
+            <br />
+            <br />
+            <button class="btn waves-effect waves-light" id="marsButton" type="submit" name="action">Photos
+              <i class="material-icons right">play_arrow</i>
+            </button>
           </div>
-
-          <div class ="col s12 m8 m4-offset ">
-
-                <div id="marsInstructions">
-                  <H5>Images and Info about NASA's Mar's Rovers</H5>
-                  <p>Click the button at right to choose a rover.</p>
-                  <p>A background screen will appear at the left.</p>
-                  <p>Push the background button for more info on that rover.</p>
-                  <p>When ready enter the date of the pictures you would like to see.</p>
-                  <p>The dates are available by sol day (martian day), or by earth date.</p>
-                  <p>If pictures don't show it might be because there were no</p>
-                  <p>pictures available from that date so choose another date.</p>
-                  <p>Each day has multiple pictures so also enter a page number.</p>
-                  <p>Default page number is 1 so it is not necessary to enter a page.</p>
-                  <p>If pictures don't show, try entering a lower page value.</p>
-                  <br />
-                  <br />
-                </div>
-                <div id="spiritBackground">
-                  <img src='images/SpiritPoster.jpeg' width="100%"/>
-                  <p>
-                    testing the space for Spirit!
-                  </p>
-                  <button class="btn waves-effect waves-light marsBackgroundButton" type="submit" name="action">More Information
-                    <i class="material-icons right">play_arrow</i>
-                  </button>
-                </div>
-                <div id="opportunityBackground">
-                  <img src='images/Opportunity.jpeg' width="100%"/>
-                  <p>
-                    testing the space for Opportunity!
-                  </p>
-                  <button class="btn waves-effect waves-light marsBackgroundButton" type="submit" name="action">More Information
-                    <i class="material-icons right">play_arrow</i>
-                  </button>
-                </div>
-                <div id="curiosityBackground">
-                  <img src='images/curiosityPoster.jpeg' width="100%"/>
-                  <p>
-                    testing the space for Curiosity!
-                  </p>
-                  <button class="btn waves-effect waves-light marsBackgroundButton" type="submit" name="action">More Information
-                    <i class="material-icons right">play_arrow</i>
-                  </button>
-                </div>
-                <div id="backgroundTitle"></div>
-                <div id="backgroundGoesHere"></div>
-                <div id='title2GoesHere'></div>
-                <!-- <div id='photo2GoesHere'></div> -->
-                <!-- <div id='description2GoesHere'></div> -->
-
+          <div class="col s6 m6">
+            <input name ="search" placeholder="earth day" value="" id="dateEntered3" type="text" class="validate">
+            <label for="dateEntered3"></label>
+            <input name ="search" placeholder="page (#1 default)" value="" id="pageEntered" type="text" class="validate">
+            <label for="pageEntered"></label>
           </div>
-
-
-
-
+          </div>
         </div>
+      </form>
+    </div>
+      <div class ="col s12 m8 m4-offset ">
+
+            <div id="marsInstructions">
+              <H5>Images and Info about NASA's Mar's Rovers</H5>
+              <p>Click the button at right to choose a rover.</p>
+              <p>A background screen will appear at the left.</p>
+              <p>Push the background button for more info on that rover.</p>
+              <p>When ready enter the date of the pictures you would like to see.</p>
+              <p>The dates are available by sol day (martian day), or by earth date.</p>
+              <p>If pictures don't show it might be because there were no</p>
+              <p>pictures available from that date so choose another date.</p>
+              <p>Each day has multiple pictures so also enter a page number.</p>
+              <p>Default page number is 1 so it is not necessary to enter a page.</p>
+              <p>If pictures don't show, try entering a lower page value.</p>
+              <br />
+              <br />
+            </div>
+            <div id="spiritBackground">
+              <img src='images/SpiritPoster.jpeg' width="100%"/>
+              <p>
+                testing the space for Spirit!
+              </p>
+              <button class="btn waves-effect waves-light marsBackgroundButton" type="submit" name="action">More Information
+                <i class="material-icons right">play_arrow</i>
+              </button>
+            </div>
+            <div id="opportunityBackground">
+              <img src='images/Opportunity.jpeg' width="100%"/>
+              <p>
+                testing the space for Opportunity!
+              </p>
+              <button class="btn waves-effect waves-light marsBackgroundButton" type="submit" name="action">More Information
+                <i class="material-icons right">play_arrow</i>
+              </button>
+            </div>
+            <div id="curiosityBackground">
+              <img src='images/curiosityPoster.jpeg' width="100%"/>
+              <p>
+                testing the space for Curiosity!
+              </p>
+              <button class="btn waves-effect waves-light marsBackgroundButton" type="submit" name="action">More Information
+                <i class="material-icons right">play_arrow</i>
+              </button>
+            </div>
+            <div id="backgroundTitle"></div>
+            <div id="backgroundGoesHere"></div>
+            <div id='title2GoesHere'></div>
+            <!-- <div id='photo2GoesHere'></div> -->
+            <!-- <div id='description2GoesHere'></div> -->
 
       </div>
-      <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
-      <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
-      <!-- <script src="noUiSlider/nouislider.min.js"></script> -->
-      <script src='app.js' charset='utf-8'></script>
-    </body>
-
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-3.1.0.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/js/materialize.min.js"></script>
+  <script>$(".button-collapse").sideNav();</script>
+  <script src='app.js' charset='utf-8'></script>
+</body>
 </html>

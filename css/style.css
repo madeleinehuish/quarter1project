@@ -1,0 +1,179 @@
+*{
+  color:white;
+  font-family: 'Orbitron', sans-serif;
+  text-shadow: 1px 1px grey;
+}
+
+input[name="rover"]:checked {
+  color: white;
+}
+
+nav .brand-logo {
+  /*padding-left: 14.5%;*/
+  font-size:30px;
+}
+
+nav ul a {
+  font-size: 17px;
+}
+
+[type="radio"]:not(:checked)+label:before, [type="radio"]:not(:checked)+label:after {
+  border: 2px solid #5a5a5a;
+}
+
+[type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:after {
+  background-color: white;
+}
+
+[type="radio"]:checked+label:after, [type="radio"].with-gap:checked+label:before, [type="radio"].with-gap:checked+label:after {
+  border: 1px solid grey;
+}
+
+#backgroundGoesHere {
+  margin-top:5%;
+  font-family: 'Open Sans', sans-serif;
+  /*font-family: 'Slabo 27px', serif;*/
+}
+
+#background, #navMars {
+  background-image: url('../images/vikingMosaicEdited.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: rgb(178,74,26);
+}
+
+#background0, #navPicofday{
+  background-image:url('../images/space.jpg');
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-color: rgb(52,98,115);
+}
+
+#background1, #navExtras{
+  background-image:url('../images/saturnCassini2.jpg');
+  background-repeat: no-repeat;
+  background-color: rgb(34,28,34);
+}
+
+#logo-containerMobile {
+  display:none;
+}
+
+#marsForm {
+  margin-top: 5%;
+}
+
+#marsFormInput {
+  margin-right: 15%;
+}
+
+#marsInstructions{
+  margin-top:22%;
+}
+
+#mobile-demoMars {
+  background-color: #dc8c5f;
+  width:250px;
+}
+
+#photoMod {
+  border-radius:4%;
+}
+
+#picInstructions {
+  margin-top: 3%;
+}
+
+#picForm {
+  margin-top: 4%;
+  margin-left:10%;
+  margin-right:5%;
+  padding-right:2%;
+  padding-left:2%;
+  border-radius: 8%;
+  background-color: rgba(0,0,0,.5);
+}
+
+#posterHolder {
+  margin-top: 10%;
+}
+
+#posterHolder, .item {
+    display: block;
+    width: 100%;
+    height: auto;
+}
+
+#radioAdjust {
+  margin-bottom:10%;
+}
+
+
+
+#spiritBackground, #opportunityBackground, #curiosityBackground {
+  margin-top: 20%;
+  display:none;
+}
+
+#titleGoesHere {
+  margin-right:60%;
+  padding-left:15%;
+  margin-left:-10%;
+}
+
+.desc{
+  background-color: rgba(0,0,0,.5);
+  border-radius: 8%;
+  padding: 10px;
+  padding-left:20px;
+}
+
+.fiXed {
+  position:fixed;
+}
+
+.marsBackgroundButton, #marsButton, #reload {
+  background-color: #635341;
+  opacity: 0.7;
+}
+
+.readableText{
+  font-family: 'Open Sans', sans-serif;
+}
+
+.right {
+  padding-right: 14.5%;
+}
+
+.side-nav {
+  background-color: #7f9c95;
+  width:250px;
+}
+
+.textHolder{
+  padding-right:20%;
+  padding-left:20%;
+  border-radius: 4%;
+  background-color: rgba(0,0,0,.5);
+}
+
+/*media*/
+@media (max-width: 768px){
+  /*.logo-container {
+    display:none;
+  }*/
+  /*#logo-containerMobile {
+    display:block;
+  }*/
+  #marsForm, #picForm {
+    position: static;
+  }
+  #picForm {
+    margin-top: 15%;
+    margin-left:-1%;
+  }
+  #posterHolder {
+    margin-top: 18%;
+  }
+
+}

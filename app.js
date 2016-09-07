@@ -226,8 +226,11 @@
     return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
   }
 
-  $('.button-collapse').sideNav();
-
+  // $('.button-collapse').sideNav();
+  // Show sideNav
+    // $('.button-collapse').sideNav('show');
+    // // Hide sideNav
+    // $('.button-collapse').sideNav('hide');
 
 
   // $('.datepicker').pickadate({
