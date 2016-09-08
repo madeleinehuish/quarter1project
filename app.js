@@ -1,6 +1,6 @@
 (function() {
   'use strict';
-
+  
   // Figure out Today's Date for Pic of Day
   var today = (function() {
     var tod = new Date(),
@@ -65,17 +65,6 @@
     $(showRover).css('display','block');
   }
 
-  function clearDivs(){
-    $('#marsInstructions').css('display','none');
-    $('#backgroundTitle').empty();
-    $('#backgroundGoesHere').empty();
-    $('#title2GoesHere').empty();
-  }
-
-  $('.refresh').click(function() {
-    location.reload();
-  });
-
   $('#rbSpirit').change(function(){
     if($(this).is(':checked')){
       clearDivs();
@@ -96,6 +85,18 @@
     clearRoverBackground('#curiosityBackground');
   }
   });
+
+  function clearDivs(){
+    $('#marsInstructions').css('display','none');
+    $('#backgroundTitle').empty();
+    $('#backgroundGoesHere').empty();
+    $('#title2GoesHere').empty();
+  }
+
+  $('.refresh').click(function() {
+    location.reload();
+  });
+
 
   $('.marsBackgroundButton').click(function(){
 
@@ -137,7 +138,7 @@
     event.preventDefault();
     clearDivs();
     clearRoverBackground();
-    
+
     var rover = $('input[name="rover"]:checked').val(),
         baseUrl = 'https://api.nasa.gov/mars-photos/api/v1/rovers/' + rover + '/photos?',
         dateValue2 = 'sol=' + $('#dateEntered2').val() + '&',
