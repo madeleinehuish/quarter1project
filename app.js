@@ -135,8 +135,9 @@
   $('#marsButton').click(function() {
 
     event.preventDefault();
+    clearDivs();
     clearRoverBackground();
-
+    
     var rover = $('input[name="rover"]:checked').val(),
         baseUrl = 'https://api.nasa.gov/mars-photos/api/v1/rovers/' + rover + '/photos?',
         dateValue2 = 'sol=' + $('#dateEntered2').val() + '&',

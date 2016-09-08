@@ -4,6 +4,11 @@
   text-shadow: 1px 1px grey;
 }
 
+/*http://stackoverflow.com/questions/16670931/hide-scroll-bar-but-still-being-able-to-scroll(this article helps no scroll for other browsers)*/
+::-webkit-scrollbar {
+    display: none;
+}
+
 input[name="rover"]:checked {
   color: white;
 }
@@ -95,14 +100,11 @@ input[name="rover"]:checked {
   background-color: rgba(0,0,0,.5);
 }
 
-#posterHolder {
-  margin-top: 5%;
-}
-
 #posterHolder, .item {
     display: block;
     width: 100%;
     height: auto;
+    margin-top:3%;
 }
 
 #radioAdjust {
@@ -145,6 +147,10 @@ input[name="rover"]:checked {
 .fiXed {
   position:fixed;
 }
+
+/*.item {
+  width: 80%;
+}*/
 
 .marsBackgroundButton, #marsButton, #reloadMars {
   background-color: #635341;
