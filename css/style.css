@@ -13,15 +13,6 @@ input[name="rover"]:checked {
   color: white;
 }
 
-/*nav .brand-logo {
-  padding-left: 14.5%;
-  font-size:30px;
-}*/
-
-/*nav ul a {
-  font-size: 17px;
-}*/
-
 [type="radio"]:not(:checked)+label:before, [type="radio"]:not(:checked)+label:after {
   border: 2px solid #5a5a5a;
 }
@@ -60,14 +51,6 @@ input[name="rover"]:checked {
   background-attachment: fixed;
   background-color: rgb(34,28,34);
 }
-
-/*#logo-containerMobile {
-  display:none;
-}*/
-
-/*#marsForm {
-  margin-top: 1%;
-}*/
 
 #marsFormInput {
   margin-right: 15%;
@@ -132,7 +115,6 @@ input[name="rover"]:checked {
   background-color: #adb0d2;
 }
 
-
 .btn:hover, .btn-large:hover, #marsButton:hover, #reloadMars:hover {
   background-color: #917a5f
 }
@@ -148,10 +130,6 @@ input[name="rover"]:checked {
   position:fixed;
 }
 
-/*.item {
-  width: 80%;
-}*/
-
 .marsBackgroundButton, #marsButton, #reloadMars {
   background-color: #635341;
   opacity: 0.7;
@@ -160,10 +138,6 @@ input[name="rover"]:checked {
 .readableText{
   font-family: 'Open Sans', sans-serif;
 }
-
-/*.right {
-  padding-right: 14.5%;
-}*/
 
 .side-nav {
   background-color: #7f9c95;
@@ -177,14 +151,8 @@ input[name="rover"]:checked {
   background-color: rgba(0,0,0,.5);
 }
 
-/*media*/
 @media (max-width: 768px){
-  /*.logo-container {
-    display:none;
-  }*/
-  /*#logo-containerMobile {
-    display:block;
-  }*/
+
   #marsForm, #picForm {
     position: static;
   }

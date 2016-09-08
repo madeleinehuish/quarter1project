@@ -1,6 +1,6 @@
 (function() {
   'use strict';
-  
+
   // Figure out Today's Date for Pic of Day
   var today = (function() {
     var tod = new Date(),
@@ -18,6 +18,60 @@
   }
   ) ();
 
+  var rovers = {
+    '#rbSpirit': '#spiritBackground',
+    '#rbOpportunity': '#opportunityBackground',
+    '#rbCuriosity': '#curiosityBackground',
+  }
+
+  //cleanup functions
+
+
+  // $('.rb').change(function(event){
+  //   if($(event.target).is(':checked')){
+  //     clearDivs();
+  //     console.log(rovers['#rbSpirit']);
+  //     console.log(rovers['"#' + event.target.id + '"']);
+  //     clearRoverBackground(event.target.id);
+  //   }
+  // });
+
+  $('#rbSpirit').change(function(){
+  if($(this).is(':checked')){
+    clearDivs();
+    clearRoverBackground('#spiritBackground');
+  }
+  });
+
+  $('#rbOpportunity').change(function(){
+  if($(this).is(':checked')){
+    clearDivs();
+    clearRoverBackground('#opportunityBackground');
+  }
+  });
+
+  $('#rbCuriosity').change(function(){
+  if($(this).is(':checked')){
+    clearDivs();
+    clearRoverBackground('#curiosityBackground');
+  }
+  });
+
+  function clearRoverBackground(showRover){
+    $('.roverBackground').css('display','none');
+    $(showRover).css('display','block');
+  }
+
+  function clearDivs(){
+    $('#marsInstructions').css('display','none');
+    $('#backgroundTitle').empty();
+    $('#backgroundGoesHere').empty();
+    $('#title2GoesHere').empty();
+  }
+
+  $('.refresh').click(function() {
+    location.reload();
+  });
   //load picture of the day and set up carousel on extras page
   $(document).ready(function() {
     if (window.location.pathname === '/Users/maddiehuish/Projects/Q1Project/index.html') {
@@ -59,43 +113,7 @@
     });
   }
 
-  //cleanup functions
-  function clearRoverBackground(showRover){
-    $('.roverBackground').css('display','none');
-    $(showRover).css('display','block');
-  }
 
-  $('#rbSpirit').change(function(){
-    if($(this).is(':checked')){
-      clearDivs();
-      clearRoverBackground('#spiritBackground');
-    }
-  });
-
-  $('#rbOpportunity').change(function(){
-  if($(this).is(':checked')){
-    clearDivs();
-    clearRoverBackground('#opportunityBackground');
-  }
-  });
-
-  $('#rbCuriosity').change(function(){
-  if($(this).is(':checked')){
-    clearDivs();
-    clearRoverBackground('#curiosityBackground');
-  }
-  });
-
-  function clearDivs(){
-    $('#marsInstructions').css('display','none');
-    $('#backgroundTitle').empty();
-    $('#backgroundGoesHere').empty();
-    $('#title2GoesHere').empty();
-  }
-
-  $('.refresh').click(function() {
-    location.reload();
-  });
 
 
   $('.marsBackgroundButton').click(function(){
