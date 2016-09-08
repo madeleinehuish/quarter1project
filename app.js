@@ -8,77 +8,34 @@
         mm = tod.getMonth()+1, //January is 0!
         yyyy = tod.getFullYear();
 
-    if(dd<10) {
+    if(dd < 10) {
         dd='0'+dd
     }
-    if(mm<10) {
+    if(mm < 10) {
         mm='0'+mm
     }
     return tod = yyyy+'-'+mm+'-'+dd;
   }
-  ) ();
+  )();
 
   var rovers = {
-    '#rbSpirit': '#spiritBackground',
-    '#rbOpportunity': '#opportunityBackground',
-    '#rbCuriosity': '#curiosityBackground',
+    '#rbSpirit' : '#spiritBackground',
+    '#rbOpportunity' : '#opportunityBackground',
+    '#rbCuriosity' : '#curiosityBackground',
   }
 
-  //cleanup functions
-
-
-  // $('.rb').change(function(event){
-  //   if($(event.target).is(':checked')){
-  //     clearDivs();
-  //     console.log(rovers['#rbSpirit']);
-  //     console.log(rovers['"#' + event.target.id + '"']);
-  //     clearRoverBackground(event.target.id);
-  //   }
-  // });
-
-  $('#rbSpirit').change(function(){
-  if($(this).is(':checked')){
-    clearDivs();
-    clearRoverBackground('#spiritBackground');
-  }
-  });
-
-  $('#rbOpportunity').change(function(){
-  if($(this).is(':checked')){
-    clearDivs();
-    clearRoverBackground('#opportunityBackground');
-  }
-  });
-
-  $('#rbCuriosity').change(function(){
-  if($(this).is(':checked')){
-    clearDivs();
-    clearRoverBackground('#curiosityBackground');
-  }
-  });
-
-  function clearRoverBackground(showRover){
-    $('.roverBackground').css('display','none');
-    $(showRover).css('display','block');
+  //toTitleCase for titles
+  function toTitleCase(str){
+    return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
   }
 
-  function clearDivs(){
-    $('#marsInstructions').css('display','none');
-    $('#backgroundTitle').empty();
-    $('#backgroundGoesHere').empty();
-    $('#title2GoesHere').empty();
-  }
-
-  $('.refresh').click(function() {
-    location.reload();
-  });
   //load picture of the day and set up carousel on extras page
   $(document).ready(function() {
     if (window.location.pathname === '/Users/maddiehuish/Projects/Q1Project/index.html') {
           picOfDay(today);
     } else if (window.location.pathname === '/Users/maddiehuish/Projects/Q1Project/extras.html') {
         $("#posterHolder").owlCarousel({
-        items:2,
+        items : 2,
         navigation : true, // Show next and prev buttons
         slideSpeed : 300,
         paginationSpeed : 400,
@@ -96,9 +53,7 @@
     var $xhr = $.getJSON('https://api.nasa.gov/planetary/apod?api_key=RC2ZEmLVWlfYOkOYT5MHXkOq82VWb85ejudwxtPm&date=' + dateValue);
 
     $xhr.done(function(data) {
-      if ($xhr.status !== 200) {
-        return;
-      }
+
       var imageTitle = data.title,
           image = data.hdurl,
           description = data.explanation,
@@ -107,15 +62,44 @@
       $('#titleGoesHere').html('<p class="desc">"' + imageTitle + '"</p>');
       $('#photoGoesHere').html(imageEl);
       $('#descriptionGoesHere').html('<p class="desc readableText">' + description + '"</p>');
-      $xhr.fail(function(err) {
-        return err;
-      });
+
     });
+    $xhr.fail(function(err) {
+      if ($xhr.status !== 200) {
+        Materialize.toast("The date entered does not exist or there is a server error on that date. Please pick another date.", 5000, '#ff5252 red accent-2');
+        return;
+    };
+
+    return err;
+  })
+
+ }
+
+  //cleanup functions
+  $('.rb').change(function(event){
+    if($(event.target).is(':checked')){
+      clearDivs();
+      clearRoverBackground(rovers['#' + event.target.id]);
+    }
+  });
+
+  function clearRoverBackground(showRover) {
+    $('.roverBackground').css('display', 'none');
+    $(showRover).css('display', 'block');
   }
 
+  function clearDivs(){
+    $('#marsInstructions').css('display', 'none');
+    $('#backgroundTitle').empty();
+    $('#backgroundGoesHere').empty();
+    $('#title2GoesHere').empty();
+  }
 
+  $('.refresh').click(function() {
+    location.reload();
+  });
 
-
+  //Mars background button
   $('.marsBackgroundButton').click(function(){
 
     event.preventDefault();
@@ -123,12 +107,13 @@
     var rover = toTitleCase($('input[name="rover"]:checked').val()),
         $oldHREF = [],
         $valOfoldHREF = [];
-
+    console.log(rover);
       $.ajax({
-         type: "GET",
-         url: "http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&page=" + rover +"_(rover)&callback=?",
-         dataType: "json",
+         type: 'GET',
+         url: 'http://en.wikipedia.org/w/api.php?action=parse&format=json&prop=text&page='+rover+'_(rover)&callback=?',
+         dataType: 'json',
          success: function (data, textStatus, jqXHR) {
+            console.log(data);
              var markup = data.parse.text["*"],
                  blurb = $('<div></div>').html(markup),
                  stringCheck=[],
@@ -149,39 +134,44 @@
       });
   })
 
-
-  //can we add earth time here?
+  //Mars photo Button
   $('#marsButton').click(function() {
-
     event.preventDefault();
     clearDivs();
     clearRoverBackground();
 
-    var rover = $('input[name="rover"]:checked').val(),
-        baseUrl = 'https://api.nasa.gov/mars-photos/api/v1/rovers/' + rover + '/photos?',
-        dateValue2 = 'sol=' + $('#dateEntered2').val() + '&',
-        apiKey = 'api_key=RC2ZEmLVWlfYOkOYT5MHXkOq82VWb85ejudwxtPm&',
-        pageValue = 'page=' + $('#pageEntered').val(),
-        $xhr = $.getJSON(baseUrl + dateValue2 + apiKey + pageValue);
+    var rover = $('input[name="rover"]:checked').val()
+    var baseUrl = 'https://api.nasa.gov/mars-photos/api/v1/rovers/' + rover + '/photos?'
+    var  dateValue2 = 'sol=' + $('#dateEntered2').val() + '&'
+    var  apiKey = 'api_key=RC2ZEmLVWlfYOkOYT5MHXkOq82VWb85ejudwxtPm&'
+    var  pageValue = 'page=' + $('#pageEntered').val()
+    var  $xhr = $.getJSON(baseUrl + dateValue2 + apiKey + pageValue);
 
     $xhr.done(function(data2) {
+      $('#title2GoesHere').append('<br />');
+      for (var i = 0; i < data2.photos.length; i++) {
+        var name = data2.photos[i].rover.name,
+            camera = data2.photos[i].camera.full_name,
+            earthDate = data2.photos[i].earth_date,
+            imgSrc = data2.photos[i].img_src,
+            extra = '" alt="Space!" class="responsive-img" height="400" ><br /><br />';
+        $('#title2GoesHere').append(`<p>"${name}${camera}${earthDate}"</p><img src="${imgSrc}${extra}"`);
+
+      }
+    });
+
+    $xhr.fail(function(err) {
       if ($xhr.status !== 200) {
+        Materialize.toast("Either you didn't enter correctly or the date entered doesn't contain any pictures or the server is not responding. Please try again.", 5000, '#81c784 green lighten-2');
         return;
       }
-      console.log(data2);
-      $('#title2GoesHere').append('<br />');
-      for (var i = 0; i < 25; i++) {
-        $('#title2GoesHere').append('<p>"'+ data2.photos[i].rover.name + ' ' + data2.photos[i].camera.full_name + ' ' + data2.photos[i].earth_date +'"</p><img src="' + data2.photos[i].img_src + '" alt="Space!" class="responsive-img" height="400" ><br /><br />');
-      }
-      $xhr.fail(function(err) {
-        return err;
-      });
+      return err;
     });
   });
 
-  function toTitleCase(str){
-    return str.replace(/\w\S*/g, function(txt){return txt.charAt(0).toUpperCase() + txt.substr(1).toLowerCase();});
-  }
+
+
+
 
 
 

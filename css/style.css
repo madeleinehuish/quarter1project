@@ -152,6 +152,10 @@ input[name="rover"]:checked {
 }
 
 @media (max-width: 768px){
+  nav .brand-logo{
+    font-size: 1.7rem;
+    margin-left: 5%;
+  }
 
   #marsForm, #picForm {
     position: static;
