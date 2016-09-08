@@ -61,7 +61,7 @@
     $('#marsInstructions').css('display','none');
     $('#backgroundTitle').empty();
     $('#backgroundGoesHere').empty();
-    $('#title2GoesHere').empty();
+    $('#title2GoesHere').empty`();`
     $('#opportunityBackground').css('display','none');
     $('#curiosityBackground').css('display','none');
     $('#spiritBackground').css('display','block');

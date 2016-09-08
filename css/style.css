@@ -60,16 +60,16 @@ input[name="rover"]:checked {
   display:none;
 }*/
 
-#marsForm {
-  margin-top: 5%;
-}
+/*#marsForm {
+  margin-top: 1%;
+}*/
 
 #marsFormInput {
   margin-right: 15%;
 }
 
 #marsInstructions{
-  margin-top:22%;
+  margin-top:11%;
 }
 
 #mobile-demoMars {
@@ -96,7 +96,7 @@ input[name="rover"]:checked {
 }
 
 #posterHolder {
-  margin-top: 10%;
+  margin-top: 5%;
 }
 
 #posterHolder, .item {
@@ -112,7 +112,7 @@ input[name="rover"]:checked {
 
 
 #spiritBackground, #opportunityBackground, #curiosityBackground {
-  margin-top: 20%;
+  margin-top: 12%;
   display:none;
 }
 
