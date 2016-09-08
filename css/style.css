@@ -82,7 +82,7 @@ input[name="rover"]:checked {
 }
 
 #picInstructions {
-  margin-top: 3%;
+  margin-top: 2%;
 }
 
 #picForm {
@@ -110,7 +110,6 @@ input[name="rover"]:checked {
 }
 
 
-
 #spiritBackground, #opportunityBackground, #curiosityBackground {
   margin-top: 12%;
   display:none;
@@ -120,6 +119,20 @@ input[name="rover"]:checked {
   margin-right:60%;
   padding-left:15%;
   margin-left:-10%;
+}
+
+#button, #reload0 {
+  background-color: #8C90C0;
+  opacity: 0.9;
+}
+
+#button:hover, #reload0:hover {
+  background-color: #adb0d2;
+}
+
+
+.btn:hover, .btn-large:hover, #marsButton:hover, #reloadMars:hover {
+  background-color: #917a5f
 }
 
 .desc{
@@ -133,7 +146,7 @@ input[name="rover"]:checked {
   position:fixed;
 }
 
-.marsBackgroundButton, #marsButton, #reload {
+.marsBackgroundButton, #marsButton, #reloadMars {
   background-color: #635341;
   opacity: 0.7;
 }

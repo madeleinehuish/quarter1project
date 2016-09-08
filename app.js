@@ -130,6 +130,8 @@
       });
   })
 
+
+  //can we add earth time here?
   $('#marsButton').click(function() {
 
     event.preventDefault();
