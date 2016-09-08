@@ -8,14 +8,14 @@ input[name="rover"]:checked {
   color: white;
 }
 
-nav .brand-logo {
-  /*padding-left: 14.5%;*/
+/*nav .brand-logo {
+  padding-left: 14.5%;
   font-size:30px;
-}
+}*/
 
-nav ul a {
+/*nav ul a {
   font-size: 17px;
-}
+}*/
 
 [type="radio"]:not(:checked)+label:before, [type="radio"]:not(:checked)+label:after {
   border: 2px solid #5a5a5a;
@@ -52,12 +52,13 @@ nav ul a {
 #background1, #navExtras{
   background-image:url('../images/saturnCassini2.jpg');
   background-repeat: no-repeat;
+  background-attachment: fixed;
   background-color: rgb(34,28,34);
 }
 
-#logo-containerMobile {
+/*#logo-containerMobile {
   display:none;
-}
+}*/
 
 #marsForm {
   margin-top: 5%;
@@ -141,9 +142,9 @@ nav ul a {
   font-family: 'Open Sans', sans-serif;
 }
 
-.right {
+/*.right {
   padding-right: 14.5%;
-}
+}*/
 
 .side-nav {
   background-color: #7f9c95;
