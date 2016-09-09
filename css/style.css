@@ -156,7 +156,6 @@ input[name="rover"]:checked {
     font-size: 1.7rem;
     margin-left: 5%;
   }
-
   #marsForm, #picForm {
     position: static;
   }
@@ -167,5 +166,4 @@ input[name="rover"]:checked {
   #posterHolder {
     margin-top: 18%;
   }
-
 }

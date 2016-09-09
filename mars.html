@@ -1,6 +1,7 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <title>Mars!</title>
   <link href="http://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
   <link href="https://fonts.googleapis.com/css?family=Orbitron" rel="stylesheet">
@@ -58,7 +59,6 @@
             <p>Enter Date and Optional Page Here</p>
             <div class="row">
               <div class="col s6 m6">
-
                 <input name ="search" placeholder="sol day" value="" id="dateEntered2" type="text" class="validate">
                 <label for="dateEntered2"></label>
                 <br />
@@ -73,57 +73,47 @@
                 <input name ="search" placeholder="page (#1 default)" value="" id="pageEntered" type="text" class="validate">
                 <label for="pageEntered"></label>
               </div>
-
             </div>
           </div>
         </form>
       </div>
       <div class ="col s12 m8 m4-offset ">
-            <div id="marsInstructions">
-              <H5>Images and Info about NASA's Mar's Rovers</H5>
-              <p>Click the button at right to choose a rover.</p>
-              <p>A background screen will appear at the left.</p>
-              <p>Push the background button for more info on that rover.</p>
-              <p>When ready enter the date of the pictures you would like to see.</p>
-              <p>The dates are available by sol day (martian day), or by earth date.</p>
-              <p>If pictures don't show it might be because there were no</p>
-              <p>pictures available from that date so choose another date.</p>
-              <p>Each day has multiple pictures so also enter a page number.</p>
-              <p>Default page number is 1 so it is not necessary to enter a page.</p>
-              <p>If pictures don't show, try entering a lower page value.</p>
-              <br />
-              <br />
-            </div>
-            <div id="spiritBackground" class="roverBackground">
-              <img src='images/SpiritPoster.jpeg' />
-              <!-- <p>
-                testing the space for Spirit!
-              </p> -->
-              <button class="btn waves-effect waves-light marsBackgroundButton" type="submit" name="action">More Information
-                <i class="material-icons right">play_arrow</i>
-              </button>
-            </div>
-            <div id="opportunityBackground" class="roverBackground">
-              <img src='images/Opportunity.jpeg' />
-              <!-- <p>
-                testing the space for Opportunity!
-              </p> -->
-              <button class="btn waves-effect waves-light marsBackgroundButton" type="submit" name="action">More Information
-                <i class="material-icons right">play_arrow</i>
-              </button>
-            </div>
-            <div id="curiosityBackground" class="roverBackground">
-              <img src='images/curiosityPoster.jpeg' />
-              <!-- <p>
-                testing the space for Curiosity!
-              </p> -->
-              <button class="btn waves-effect waves-light marsBackgroundButton" type="submit" name="action">More Information
-                <i class="material-icons right">play_arrow</i>
-              </button>
-            </div>
-            <div id="backgroundTitle"></div>
-            <div id="backgroundGoesHere"></div>
-            <div id='title2GoesHere'></div>
+        <div id="marsInstructions">
+          <H5>Images and Info about NASA's Mar's Rovers</H5>
+          <p>Click the button at right to choose a rover.</p>
+          <p>A background screen will appear at the left.</p>
+          <p>Push the background button for more info on that rover.</p>
+          <p>When ready enter the date of the pictures you would like to see.</p>
+          <p>The dates are available by sol day (martian day), or by earth date.</p>
+          <p>If pictures don't show it might be because there were no</p>
+          <p>pictures available from that date so choose another date.</p>
+          <p>Each day has multiple pictures so also enter a page number.</p>
+          <p>Default page number is 1 so it is not necessary to enter a page.</p>
+          <p>If pictures don't show, try entering a lower page value.</p>
+          <br />
+          <br />
+        </div>
+        <div id="spiritBackground" class="roverBackground">
+          <img src='images/SpiritPoster.jpeg' alt="spirit poster" />
+          <button class="btn waves-effect waves-light marsBackgroundButton" type="submit" name="action">More Information
+            <i class="material-icons right">play_arrow</i>
+          </button>
+        </div>
+        <div id="opportunityBackground" class="roverBackground">
+          <img src='images/Opportunity.jpeg' alt="spirit poster"/>
+          <button class="btn waves-effect waves-light marsBackgroundButton" type="submit" name="action">More Information
+            <i class="material-icons right">play_arrow</i>
+          </button>
+        </div>
+        <div id="curiosityBackground" class="roverBackground">
+          <img src='images/curiosityPoster.jpeg' alt="spirit poster"/>
+          <button class="btn waves-effect waves-light marsBackgroundButton" type="submit" name="action">More Information
+            <i class="material-icons right">play_arrow</i>
+          </button>
+        </div>
+        <div id="backgroundTitle"></div>
+        <div id="backgroundGoesHere"></div>
+        <div id='title2GoesHere'></div>
       </div>
     </div>
   </div>
