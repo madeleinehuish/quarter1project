@@ -17,7 +17,8 @@ This was probably figuring out the API in the beginning with NASA. I also took s
 Mobile responsiveness took awhile to figure out, especially with the finickiness of Materialize. Also getting my divs to align correctly for mobile was tricky as they were switched from normal orientation.
 
 Notes:
-The earth date function is not currently active even though showing. 
+The earth date function is not currently active even though showing.
+The site is best viewed in Chrome on desktop.
 
 The program can be found online at:
 
