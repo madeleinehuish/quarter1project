@@ -18,5 +18,5 @@ Mobile responsiveness took awhile to figure out, especially with the finickiness
 
 The program can be found online at:
 
-[Maddie's Astronomy Program](maddie-astronomy-program.surge.sh)
+[Maddie's Astronomy Program](http://maddie-astronomy-program.surge.sh)
 maddie-astronomy-program.surge.sh
